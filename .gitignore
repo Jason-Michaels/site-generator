@@ -1,3 +1,5 @@
 node_modules/
 package-lock.json
 frontend/mysite.io/public/
+.now/
+__pycache__/
