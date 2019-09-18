@@ -1,8 +1,7 @@
-from starlette.applications import Starlette
-from starlette.responses import JSONResponse
+import responder
 
-app = Starlette(debug=True)
+api = responder.API()
 
-@app.route('/{path}')
-async def homepage(request, path):
-    return JSONResponse({'hello': path})
+@api.route("/{greeting}")
+async def greet_world(req, resp, *, greeting):
+    resp.text = f"{greeting}, world!"
