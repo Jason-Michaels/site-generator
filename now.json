@@ -2,7 +2,8 @@
   "version": 2,
   "builds": [
       { "src": "package.json",
-        "use": "@now/static-build"
+        "use": "@now/static-build",
+        "config": { "distDir": "frontend/mysite.io/public" }
       },
       {
             "src": "index.py",
