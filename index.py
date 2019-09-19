@@ -1,4 +1,5 @@
 import responder
+import sys
 
 app = responder.API(debug=True, static_dir='.',templates_dir='.')
 
@@ -16,7 +17,10 @@ def hello_html(req, resp, *, path):
         url = path
     #url = path
     print(url)
-    resp.html = app.template(url, url=url)
+    try:
+        resp.html = app.template(url, url=url)
+    except:
+        print("Error occurred: ", sys.exc_info()[1])
 
 
 if __name__ == '__main__':
