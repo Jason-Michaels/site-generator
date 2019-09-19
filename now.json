@@ -11,7 +11,7 @@
             "config": {
                 "maxLambdaSize": "25mb",
                 "includeFiles": [
-                    "**/**"
+                    "**"
                     ]
                 }
       }
