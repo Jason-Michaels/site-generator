@@ -8,11 +8,15 @@
       {
             "src": "index.py",
             "use": "@now/python",
-            "config": { "maxLambdaSize": "25mb" }
+            "config": {
+                "maxLambdaSize": "25mb",
+                "includeFiles": [
+                    "**/**"
+                    ]
+                }
       }
    ],
    "routes": [
-        { "src": "/custom-page", "headers": {"cache-control": "s-maxage=1000"}, "dest": "/index.html" },
         {
             "src": "(.*)",
             "dest": "index.py"
