@@ -14,7 +14,7 @@ view.add(['POST', 'PUT'], lambda request: text('I am a post/put method'))
 # Use the new view to handle requests to the base URL
 app.add_route(view, '/api')
 
-app.static('/', './')
+app.static('/', '.')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000)
