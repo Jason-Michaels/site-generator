@@ -9,17 +9,18 @@
             "src": "index.py",
             "use": "@now/python",
             "config": {
-                "maxLambdaSize": "25mb",
-                "includeFiles": [
-                    "*"
-                    ]
+                "maxLambdaSize": "25mb"
                 }
       }
    ],
    "routes": [
         {
-            "src": "(.*)",
+            "src": "/api",
             "dest": "index.py"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "$1"
         }
     ]
 }
