@@ -8,6 +8,8 @@ async def greet_world(req, resp, *, greeting):
 
 @app.route("/{path}")
 def hello_html(req, resp, *, path):
+    if len(path) == 0:
+        url = "index.html"
     if path.split('.')[-1] == '':
         url = f"{path}/index.html"
     else:
