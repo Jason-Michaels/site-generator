@@ -12,6 +12,7 @@
       }
    ],
    "routes": [
+        { "src": "/custom-page", "headers": {"cache-control": "s-maxage=1000"}, "dest": "/index.html" },
         {
             "src": "(.*)",
             "dest": "index.py"
