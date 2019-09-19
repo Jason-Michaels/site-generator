@@ -17,10 +17,10 @@ def hello_html(req, resp, *, path):
         # url = path
     url = path
     print(url)
-    try:
-        resp.html = app.template(url, url=url)
-    except Exception as e:
-        print("Error occurred: ", e) 
+    #try:
+    resp.html = app.template(url, url=url)
+    #except Exception as e:
+    #    print("Error occurred: ", e) 
 
 
 #if __name__ == '__main__':
