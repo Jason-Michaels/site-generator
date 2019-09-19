@@ -4,6 +4,23 @@
       { "src": "package.json",
         "use": "@now/static-build",
         "config": { "distDir": "frontend/mysite.io/public" }
+      },
+      {
+            "src": "index.py",
+            "use": "@now/python",
+            "config": {
+                "maxLambdaSize": "25mb"
+                }
       }
-   ]
+   ],
+   "routes": [
+        {
+            "src": "/api",
+            "dest": "index.py"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "$1"
+        }
+    ]
 }
