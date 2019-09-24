@@ -1,6 +1,6 @@
 {
   "name": "site-generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "node": "10.x"
   },
@@ -8,7 +8,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cogear-build": "cd frontend/mysite.io && node ../../node_modules/cogear/bin/cogear.js build",
-    "now-build": "npm run cogear-build"
+    "now-build": "npx @11ty/eleventy --input=frontend/mysite.io --output=frontend/mysite.io/public"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/Jason-Michaels/site-generator#readme",
   "devDependencies": {
-    "cogear": "^1.3.4"
+    "@11ty/eleventy": "^0.9.0"
   }
 }

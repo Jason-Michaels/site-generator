@@ -1,0 +1,11 @@
+---js
+{
+  title: "My page title",
+  layout: "layouts/base.njk",
+  currentDate: function() {
+    // You can have a JavaScript function here!
+    return (new Date()).toLocaleString();
+  }
+}
+---
+    <h1>main title {{ currentDate() }}</h1>
