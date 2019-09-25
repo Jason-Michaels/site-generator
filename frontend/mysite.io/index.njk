@@ -3,7 +3,7 @@ title: My page title
 layout: layouts/base.njk
 simple: simple value
 ---
-    <h1>{{ global.currentDate() }} {{ simple }} </h1>
+    <h1>{{ global.my_var }} {{ global.currentDate() }} {{ simple }} </h1>
 
 {% for dump_data in sitecontent %}
  data -

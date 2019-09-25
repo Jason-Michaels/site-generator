@@ -22,5 +22,9 @@
             "src": "/(.*)",
             "dest": "$1"
         }
-    ]
+    ], 
+    "env": {
+        "test2": "Hello there",
+        "APIURL": "@api—url"
+    }
 }
