@@ -3,7 +3,7 @@ require('dotenv').config();
 
 module.exports = async function() {
     let path = 'sheet1'
-    return axios.get(process.env.APIURL + path)
+    return axios.get(process.env.APIURL2 + path)
         .then(function (response) {
             console.log(response.data);
             return response.data;

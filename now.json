@@ -25,6 +25,6 @@
     ], 
     "env": {
         "test2": "Hello there",
-        "APIURL": "@api—url"
+        "APIURL2": "@api—url"
     }
 }
