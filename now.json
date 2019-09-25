@@ -3,10 +3,6 @@
   "builds": [
       { "src": "package.json",
         "use": "@now/static-build",
-        "env":{
-            "APIURL2":"@api-url", 
-            "test2": "Hello there"
-        }, 
         "config": { "distDir": "frontend/mysite.io/public" }
       },
       {
@@ -26,5 +22,11 @@
             "src": "/(.*)",
             "dest": "$1"
         }
-    ]
+    ],
+    "build": {
+        "env":{
+            "APIURL2":"@api-url",
+            "test2": "Hello there"
+        }
+    } 
 }
