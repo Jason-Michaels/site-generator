@@ -22,5 +22,11 @@
             "src": "/(.*)",
             "dest": "$1"
         }
-    ]
+    ],
+    "build": {
+        "env":{
+            "APIURL2":"@api-url",
+            "test2": "Hello there"
+        }
+    } 
 }
